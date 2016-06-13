@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "angular-oauth2": "^4.0.0",
     "gulp": "^3.9.1",
     "gulp-concat-css": "^2.3.0",
     "gulp-notify": "^2.2.0",

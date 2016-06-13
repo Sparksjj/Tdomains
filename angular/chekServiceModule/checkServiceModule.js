@@ -1,0 +1,1 @@
+var chekService = angular.module("chekServiceModule", []);

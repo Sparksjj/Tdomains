@@ -1,0 +1,22 @@
+body{
+	background-color: #FCFFFF;
+	color: #010F29;
+}
+
+/* navigation */
+#navigation-wrapper{
+	background-color: #DDF1E4;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#main-navigation{
+	background-color: #DDF1E4;
+	margin-bottom: 0;
+	padding: 0;
+	border: none;
+}
+
+#checkDomains{
+ background-color: #C2F1CC
+}

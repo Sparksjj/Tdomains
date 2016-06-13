@@ -1,16 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
-  
+    <link rel="shortcut icon" href="">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     
     <title>Test</title>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!-- Bootstrap -->
     <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,18 +19,49 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="css/main.css" rel="stylesheet">
+    <link href="../css/addThis.css" rel="stylesheet">
+
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
 
   </head>
   <body>
 
 
-    <div class="container">
-      hello world
-    </div>
+    <navigation></navigation>
+    
+    <div ng-view></div>
+
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+
+     <!-- for oauth 2.0 -->   
+    <script src="../node_modules/angular-oauth2/node_modules/angular-cookies/angular-cookies.min.js"></script>
+    <script src="../node_modules/angular-oauth2/node_modules/query-string/query-string.js"></script>
+    <script src="../node_modules/angular-oauth2/dist/angular-oauth2.min.js"></script>
+
+
+
+
+    <!-- Angular -->    
+    <script src="../angular/app.js"></script>
+    <!-- chekDomainsModule -->    
+    <script src="../angular/chekServiceModule/checkServiceModule.js"></script>
+    <script src="../angular/chekServiceModule/checkServiceController.js"></script>
+    <!-- userModule -->    
+    <script src="../angular/userModule/userModule.js"></script>
+    <script src="../angular/userModule/userController.js"></script>
+    <!-- adminModule -->    
+    <script src="../angular/adminModule/adminModule.js"></script>
+    <script src="../angular/adminModule/adminController.js"></script>
+    <!-- autorizationModule -->    
+    <script src="../angular/autorizationModule/autorizationModule.js"></script>
+    <script src="../angular/autorizationModule/autorizationController.js"></script>
+    <script src="../angular/autorizationModule/autorizationNavigation.js"></script>
+
   </body>
 </html>
