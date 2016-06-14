@@ -1,5 +1,5 @@
-chekService.controller('checkServiceController', ['$scope', '$rootScope', '$timeout', "checkServiceGetRequests",
-function($scope, $rootScope, $timeout, getRequests){
+chekService.controller('checkServiceController', ['$scope', '$rootScope', '$timeout', "checkServiceGetRequests", 'basketStorage',
+function($scope, $rootScope, $timeout, getRequests, basketStorage){
 	$scope.domains = [];
 	$scope.hostName = '';
 	$scope.load = false;
@@ -8,6 +8,22 @@ function($scope, $rootScope, $timeout, getRequests){
 
 	$scope.checkDomain = function(){
 		$scope.load = true;
+		if ($scope.hostName.length < 2) {return};
+		for (var i = $scope.currentDomains.length - 1; i >= 0; i--) {
+			if($scope.currentDomains[i].name == $scope.hostName){
+				for (var g = 2; g >= 0; g--) {
+					
+					for(val in $scope.domains) if ($scope.domains.hasOwnProperty(val)) {
+						if ($scope.domains[val] && $scope.currentDomains[i].domains.indexOf(val) == -1) {
+							$scope.currentDomains[i].domains.push(val)
+						};	
+					}
+
+				}
+				return;
+			}
+		}
+
 		var data = {
 			id: $scope.currentDomains.length,
 			name: $scope.hostName,
@@ -27,7 +43,8 @@ function($scope, $rootScope, $timeout, getRequests){
 			data.domains = ["by", "eu", "tm"];
 		};
 		$scope.currentDomains.push(data)
-		$scope.hostName = ""
+		$scope.hostName = "";
+
 		/*
 		getRequests.checkDomain($scope.hostName, $scope.domains).then(function(res){
 			$scope.load = false;
@@ -42,15 +59,15 @@ function($scope, $rootScope, $timeout, getRequests){
 		}, 1000, data)
 	}
 
-	$scope.removeDomain = function($event){
-		var pos = $($event.target).attr("data-id");
+	$scope.removeDomain = function($event, id, domain){
+		var pos = id;
 
 		for (var j = $scope.currentDomains.length - 1; j >= 0; j--) {
 			if($scope.currentDomains[j].id == pos){
 
 				for (var i = $scope.currentDomains[j].domains.length - 1; i >= 0; i--) {
 		
-					if($scope.currentDomains[j].domains[i] == $($event.target).attr("data-domain")){
+					if($scope.currentDomains[j].domains[i] == domain){
 						
 						if ($scope.currentDomains[j].domains.length==1) {
 							$scope.currentDomains.splice(j, 1)
@@ -65,6 +82,6 @@ function($scope, $rootScope, $timeout, getRequests){
 	}
 
 	$scope.addInBascet = function($event, name){
-		$rootScope.basketItems.push( {name: name, period: 1})
+		basketStorage.addItem({name: name, period: 1})
 	}
 }]);

@@ -20,12 +20,12 @@
           <li><a ng-if="false" href="#">personal account</a></li>
           <li><a href="index.html#/admin">Admin</a></li>
           <li><a href="index.html#/user">User</a></li>
-          <li><a href="index.html#/basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> basket<span>{{basketItems.length}}</span></a></li>
+          <li ng-controller="basketController"><a href="index.html#/basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> basket <span ng-if="basketItems.length" ng-bind="'('+basketItems.length+')'"></span></a></li>
         </ul>
   
         <ul class="nav navbar-nav navbar-right">
-          <li><a ng-if="true" href="#">Log In</a></li>
-          <li><a ng-if="true" href="#">Sign Up</a></li>
+          <li><a class="for-pointer" ng-if="true" data-toggle="modal" data-target="#log-in">Log In</a></li>
+          <li><a class="for-pointer" ng-if="true" data-toggle="modal" data-target="#sign-in">Sign Up</a></li>
 
           <li ng-if="false" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i><span class="caret"></span></a>

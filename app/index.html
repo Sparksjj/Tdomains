@@ -24,14 +24,15 @@
     <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
 
   </head>
-  <body ng-controller="appCtrl">
+  <body>
 
 
     <navigation></navigation>
     
     <div ng-view></div>
-
-
+    <ng-footer></ng-footer>
+    <modal-window></modal-window>
+    
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -66,10 +67,12 @@
     <script src="../angular/autorizationModule/autorizationModule.js"></script>
     <script src="../angular/autorizationModule/autorizationController.js"></script>
     <script src="../angular/autorizationModule/autorizationNavigation.js"></script>
+    <script src="../angular/autorizationModule/modalWindow.js"></script>
     <!-- basketModule -->    
     <script src="../angular/basketModule/basketModule.js"></script>
     <script src="../angular/basketModule/basketController.js"></script>
     <script src="../angular/basketModule/basketItem.js"></script>
+    <script src="../angular/basketModule/basketStorageItems.js"></script>
 
   </body>
 </html>

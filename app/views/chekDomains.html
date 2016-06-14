@@ -4,7 +4,7 @@
 		<form class="form-inline">
 		  <div class="form-group">		    
 		    
-		    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="domain" ng-model="hostName"> 	
+		    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="domain" ng-model="hostName" ng-pattern=""> 	
 		    <button class="btn btn-default" ng-click="checkDomain()">check</button>
 		    <label class="checkbox-inline">
 			  <input type="checkbox" id="inlineCheckbox1" value="option1" ng-model="domains.by"> by
@@ -19,13 +19,13 @@
 		</form>
 		<ul class="list-unstyled" id="domains">
 			<li>
-				<div class="col-xs-12" ng-if="currentDomains.length">
-					<span class="col-xs-2">status</span>
-					<span class="col-xs-2">name</span>
-					<span class="col-xs-2">period</span>
-					<span class="col-xs-2">price</span>
-					<span class="col-xs-2">in basket</span>
-					<span class="col-xs-2">Remove</span>
+				<div class="col-xs-12 no-padding table-head" ng-if="currentDomains.length">
+					<div class="col-xs-2">status</div>
+					<div class="col-xs-2">name</div>
+					<div class="col-xs-2">period</div>
+					<div class="col-xs-2">price</div>
+					<div class="col-xs-2">in the basket</div>
+					<div class="col-xs-2">Remove</div>
 				</div>
 			</li>
 			<domain ng-repeat="domain in currentDomains"></domain>

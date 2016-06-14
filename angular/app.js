@@ -27,5 +27,18 @@ var app = angular.module("myApp", ['ngRoute', 'userModule', 'chekServiceModule',
 app.controller('appCtrl', ['$scope', "$rootScope",
     function($scope, $rootScope) {
 
-    $rootScope.basketItems = [];
-    }]);
+}]);
+
+app.directive('ngFooter', function() { 
+  return { 
+
+    restrict: 'EA', 
+    scope: true, 
+    templateUrl: 'views/template/footer.html',
+
+    link: function($scope, element, attr){
+      
+    }
+
+  }; 
+});

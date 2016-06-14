@@ -1,8 +1,28 @@
 <div class="container-fluid block-wrapper" id="checkDomains">
-	<div class="container text-center">
-		<div ng-repeat="item in basketItems">
-			{{item}}
+	<div class="container text-center" ng-controller="basketController">
+
+		<div class="col-xs-12 table-head"  ng-if="basketItems.length">
+			<span class="col-xs-3" >name</span>
+			<span class="col-xs-3" >period</span>
+			<span class="col-xs-3" >price</span>
+			<span class="col-xs-3" >controll</span>
 		</div>
-		<div ng-if="!basketItems.length">The basket is empty</div>
+
+
+		<div ng-repeat="item in basketItems">
+
+			<div class="col-xs-12">
+				<span class="col-xs-3" >{{item.name}}</span>
+				<span class="col-xs-3" >{{item.period}}</span>
+				<span class="col-xs-3" >$300</span>
+				<span class="col-xs-3 remove for-pointer" ng-click="removeBasketItem($event, item.name)"><i class="fa fa-times" aria-hidden="true"></i> Remove</span>
+			</div>
+
+		</div>
+
+		<div class="text-center"  ng-if="basketItems.length">
+			total coast: ${{basketItems.length*300}} <button class="btn btn-default" data-toggle="modal" data-target="#log-in">By</button>
+		</div>
+		<div ng-if="!basketItems.length">The basket is empty you can <a href="index.html#/">chek new domains</a></div>
 	</div>
 </div>

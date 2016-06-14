@@ -25,3 +25,18 @@ body{
 .for-pointer{
  cursor: pointer;
 }
+
+.footer-wrapper{
+	background-color: #6D7385;
+	color: #FCFFFF;
+	padding: 20px 0;
+}
+.no-padding{
+	padding: 0;
+}
+
+.table-head{
+	margin: 10px 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #6D7385;
+}
