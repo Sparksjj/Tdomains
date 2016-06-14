@@ -24,7 +24,7 @@
     <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
 
   </head>
-  <body>
+  <body ng-controller="appCtrl">
 
 
     <navigation></navigation>
@@ -38,13 +38,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
 
      <!-- for oauth 2.0 -->   
     <script src="../node_modules/angular-oauth2/node_modules/angular-cookies/angular-cookies.min.js"></script>
     <script src="../node_modules/angular-oauth2/node_modules/query-string/query-string.js"></script>
     <script src="../node_modules/angular-oauth2/dist/angular-oauth2.min.js"></script>
-
-
+    <script src="https://use.fontawesome.com/8bb910b329.js"></script>
 
 
     <!-- Angular -->    
@@ -52,6 +54,8 @@
     <!-- chekDomainsModule -->    
     <script src="../angular/chekServiceModule/checkServiceModule.js"></script>
     <script src="../angular/chekServiceModule/checkServiceController.js"></script>
+    <script src="../angular/chekServiceModule/checkServiceGetRequests.js"></script>
+    <script src="../angular/chekServiceModule/domain.js"></script>
     <!-- userModule -->    
     <script src="../angular/userModule/userModule.js"></script>
     <script src="../angular/userModule/userController.js"></script>
@@ -62,6 +66,10 @@
     <script src="../angular/autorizationModule/autorizationModule.js"></script>
     <script src="../angular/autorizationModule/autorizationController.js"></script>
     <script src="../angular/autorizationModule/autorizationNavigation.js"></script>
+    <!-- basketModule -->    
+    <script src="../angular/basketModule/basketModule.js"></script>
+    <script src="../angular/basketModule/basketController.js"></script>
+    <script src="../angular/basketModule/basketItem.js"></script>
 
   </body>
 </html>

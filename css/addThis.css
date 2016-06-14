@@ -1,6 +1,7 @@
 body{
 	background-color: #FCFFFF;
 	color: #010F29;
+	min-width: 320px;
 }
 
 /* navigation */
@@ -17,6 +18,10 @@ body{
 	border: none;
 }
 
-#checkDomains{
- background-color: #C2F1CC
+.block-wrapper{
+ background-color: #C2F1CC;
+ padding: 20px 0;
+}
+.for-pointer{
+ cursor: pointer;
 }

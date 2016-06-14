@@ -1,0 +1,16 @@
+<li ng-repeat="d in domain.domains">
+	<div class="col-xs-12">
+		<span class="col-xs-2">
+			<i class="fa fa-spinner fa-pulse fa-2x fa-fw" ng-show="load" ng-if="domain.loadComplite"></i>
+			<i class="fa fa-unlock" aria-hidden="true" ng-if="!domain.loadComplite"></i>
+		</span>
+		<span class="col-xs-2">{{domain.name+'.'+d}}</span>
+		<span class="col-xs-2"><i class="fa fa-spinner fa-pulse fa-2x fa-fw" ng-show="load" ng-if="domain.loadComplite"></i></span>
+		<span class="col-xs-2"><i class="fa fa-spinner fa-pulse fa-2x fa-fw" ng-show="load" ng-if="domain.loadComplite"></i></span>
+		<span class="col-xs-2" >
+			<i class="fa fa-spinner fa-pulse fa-2x fa-fw" ng-show="load" ng-if="domain.loadComplite"></i>
+			<i class="fa fa-shopping-cart for-pointer" aria-hidden="true" ng-if="!domain.loadComplite" ng-click="addInBascet($event, domain.name+'.'+d)"></i>
+		</span>
+		<span class="col-xs-2 remove for-pointer" ng-click="removeDomain($event)" data-id="{{domain.id}}" data-domain="{{d}}"><i class="fa fa-times" aria-hidden="true"></i> Remove</span>
+	</div>
+</li>

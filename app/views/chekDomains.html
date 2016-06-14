@@ -1,5 +1,34 @@
-<div class="container-fluid" id="checkDomains">
-	<div class="container">
-		hello
+<div class="container-fluid block-wrapper" id="checkDomains">
+	<div class="container text-center">
+
+		<form class="form-inline">
+		  <div class="form-group">		    
+		    
+		    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="domain" ng-model="hostName"> 	
+		    <button class="btn btn-default" ng-click="checkDomain()">check</button>
+		    <label class="checkbox-inline">
+			  <input type="checkbox" id="inlineCheckbox1" value="option1" ng-model="domains.by"> by
+			</label>
+			<label class="checkbox-inline">
+			  <input type="checkbox" id="inlineCheckbox2" value="option2" ng-model="domains.eu"> eu
+			</label>
+			<label class="checkbox-inline">
+			  <input type="checkbox" id="inlineCheckbox3" value="option3" ng-model="domains.tm"> tm
+			</label>
+		  </div>
+		</form>
+		<ul class="list-unstyled" id="domains">
+			<li>
+				<div class="col-xs-12" ng-if="currentDomains.length">
+					<span class="col-xs-2">status</span>
+					<span class="col-xs-2">name</span>
+					<span class="col-xs-2">period</span>
+					<span class="col-xs-2">price</span>
+					<span class="col-xs-2">in basket</span>
+					<span class="col-xs-2">Remove</span>
+				</div>
+			</li>
+			<domain ng-repeat="domain in currentDomains"></domain>
+		</ul>
 	</div>
 </div>
