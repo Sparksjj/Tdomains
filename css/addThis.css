@@ -40,3 +40,20 @@ body{
 	padding-bottom: 5px;
 	border-bottom: 1px solid #6D7385;
 }
+
+@media only screen and (max-width: 400px){
+	#table_id_wrapper td{
+		padding: 8px 0;
+		text-align: center;
+	}
+	#table_id_wrapper th{
+		padding: 8px 0;
+		padding-right: 17px;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 700px){
+	#table_id_wrapper .user-dropdown{
+		left: -87px;
+	}
+}
