@@ -1,4 +1,4 @@
-autorization.controller('autorizationController', ['$scope', '$rootScope', 
-function($scope, $rootScope){
- 
+autorization.controller('autorizationController', ['$scope', '$rootScope', 'security',
+function($scope, $rootScope, security){
+	
 }]);
